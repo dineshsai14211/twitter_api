@@ -1,10 +1,11 @@
 import tweepy
+import os
 
-bearer_token = "AAAAAAAAAAAAAAAAAAAAAOvSvAEAAAAA%2Bu7WQlHYsHfl%2FHIISG8kn%2FZMyxo%3D9HpCKnC6qqlwoPrnSD8GWDojRaekcuvcZT0qe2S2aPhbkDe0u4"
-consumer_key = "imsOcCqDyZL7M1yKdhAP5LxPV"
-consumer_secret = "2vMdApaumnXj2yJvXXfVV4xkXgVjYIXLOQ71ohYCfAVLdCtN7v"
-access_token = "1820422094535938048-XAiDEMAXWPCgosP0doN4tv5PLuKHUN"
-access_token_secret = ""
+bearer_token = os.getenv("BEARER_TOKEN")
+consumer_key = os.getenv("CONSUMER_KEY")
+consumer_secret = os.getenv("CONSUMER_SECRET")
+access_token = os.getenv("ACCESS_TOKEN")
+access_token_secret = os.getenv("ACCESS_TOKEN_SECRET")
 
 # V1 api authentication
 auth = tweepy.OAuth1UserHandler(consumer_key, consumer_secret, access_token, access_token_secret)
